@@ -1,0 +1,117 @@
+#contact {
+    background: #f8f9fa;
+    padding: 80px 0 40px 0;
+}
+
+.section-padding {
+    padding: 60px 0px;
+}
+
+#contact .info i {
+    font-size: 32px;
+    color: #2dc997;
+    float: left;
+}
+
+#sendmessage {
+    color: green;
+    border: 1px solid green;
+    display: none;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+.form-control {
+    height: 40px;
+}
+
+.br-radius-zero {
+    border-radius: 0px;
+}
+
+.btn-form, .btn-form:hover, .btn-form:focus {
+    background-color: #0cb8b6;
+    color: #fff;
+    border-radius: 0px;
+    padding: 10px 20px;
+}
+
+h2 {
+    line-height: 20px;
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+hr.botm-line {
+    height: 3px;
+    width: 60px;
+    background: #ffb737;
+    position: relative;
+    border: 0;
+    margin: 20px 0 20px 0;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+.h3, h3 {
+    font-size: 24px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    color: #222222;
+}
+
+
+.space {
+    margin-top: 40px;
+}
+
+.fa.pull-left {
+    margin-right: .3em;
+}
+.pull-left {
+    float: left!important;
+}
+.pull-left {
+    float: left;
+}
+i.fa.fa-map-marker.fa-fw.pull-left.fa-2x {
+}
+
+i.fa.fa-map-marker.fa-fw.pull-left.fa-2x {
+}
+.fa-fw {
+    width: 1.28571429em;
+    text-align: center;
+}
+.fa-2x {
+    font-size: 2em;
+}
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+

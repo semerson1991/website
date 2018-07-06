@@ -1,0 +1,7 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+    {% for video in object_list %}
+        <h5>{{ video.title }}</h5><a href="/video/{{video.id}}">{{video.id}}</a>
+    {% endfor %}
+{% endblock %}

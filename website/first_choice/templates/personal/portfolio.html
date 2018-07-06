@@ -1,0 +1,97 @@
+{% extends "personal/header.html" %}
+
+
+{% block content %}
+
+<!-- Image and Video lightbox from: http://ashleydw.github.io/lightbox/ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js.map"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js.map"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"/>
+
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'personal/css/portfolio.css' %}" type="text/css"/>
+
+<h1 class="text-center">Browse our latest work</h1>
+
+<p class="page-description text-center">We take pride in providing a fast, clean, professional service to our
+    customers</p>
+
+<script>
+function myFunction() {
+    var images = document.getElementById("images");
+    var videos = document.getElementById("videos");
+
+    if (images.style.display === "none") {
+        images.style.display = "block";
+        videos.style.display = 'none'
+    } else {
+        images.style.display = "none";
+        videos.style.display = 'block'
+    }
+}
+
+
+</script>
+<div class="portfolio-buttons-toggle">
+    <button type="button" class="btn f btn-light" onclick="myFunction()">Images</button>
+    <button type="button" class="btn f btn-light" onclick="myFunction()">Videos</button>
+</div>
+
+<div class="row justify-content-center">
+
+    <div id="images">
+<div row>
+        {% for image in object_list %}
+               <a class="col-sm-4" href="{{ image.url }}" data-toggle="lightbox" data-gallery="example-gallery">
+                <img class="img-fluid" src="{{ image.url }}">
+            </a>
+        {% endfor %}
+      </div>
+        <div row>
+    <a class="col-sm-4" href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="example-gallery">
+                <img class="img-fluid" src="https://unsplash.it/600.jpg?image=251">
+            </a>
+            <a class="col-sm-4" href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="example-gallery">
+                <img class="img-fluid" src="https://unsplash.it/600.jpg?image=252">
+            </a>
+            <a class="col-sm-4" href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="example-gallery">
+                <img class="img-fluid" src="https://unsplash.it/600.jpg?image=253">
+            </a>ex
+</div>
+
+</div>
+    <div id="video" style="display:none;">
+        <div class="row">
+
+            <a href="https://www.youtube.com/watch?v=WCIgEL0Fv2E" data-toggle="lightbox" data-gallery="youtubevideos"
+               class="col-sm-4">
+                <img src="http://i1.ytimg.com/vi/yP11r5n5RNg/mqdefault.jpg" class="img-fluid">
+            </a>
+            <a href="https://www.youtube.com/watch?v=kOTziD3v57k" data-toggle="lightbox" data-gallery="youtubevideos"
+               class="col-sm-4">
+                <img src="http://i1.ytimg.com/vi/iQ4D273C7Ac/mqdefault.jpg" class="img-fluid">
+            </a>
+            <a href="https://www.youtube.com/watch?v=xdSm_kDYwsg" data-toggle="lightbox" data-gallery="youtubevideos"
+               class="col-sm-4">
+                <img src="http://i1.ytimg.com/vi/iQ4D273C7Ac/mqdefault.jpg" class="img-fluid">
+            </a>
+
+        </div>
+    </div>
+</div>
+<script>
+            $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
+
+</script>
+
+
+{% endblock %}

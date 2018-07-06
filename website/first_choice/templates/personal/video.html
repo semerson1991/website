@@ -1,0 +1,7 @@
+{% extends "personal/header.html" %}
+
+{% block content %}
+    <h3>{{ video.title }}</h3>
+    <h2>NEW PAGE</h2>
+    {{post.body|safe|linebreaks}}
+{% endblock %}
