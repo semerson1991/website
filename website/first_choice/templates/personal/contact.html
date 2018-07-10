@@ -12,6 +12,12 @@
                   crossorigin="anonymous">
         </div>
 
+        <div id="emailSent">
+            {% for message in messages %}
+            <p {% if message.tags == "success" %} class="alert alert-success" {% endif %}> {{ message }}</p>
+            {% endfor %}
+        </div>
+
         <section id="contact" class="section-padding">
             <div class="container">
                 <div class="row">
@@ -19,7 +25,7 @@
                         <h2 class="ser-title">Contact us</h2>
                         <hr class="botm-line">
                     </div>
-                    <div class="col-md-4 col-sm-4 info">
+                    <div class="col-md-4 col-sm-4 info" style="margin-top:90px;">
                         <h3>Contact Info</h3>
                         <div class="space"></div>
                         <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>Yate<br> Bristol, BS37</p>
@@ -38,8 +44,7 @@
                                 <div class="form-group">
                                     <input type="text" name="name" class="form-control br-radius-zero" id="name"
                                            placeholder="Your Name" data-rule="minlen:4"
-                                           data-msg="Please enter at least 4 chars"
-                                           style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+                                           data-msg="Please enter at least 4 chars">
                                     <div class="validation"></div>
                                 </div>
                                 <div class="form-group">
@@ -72,4 +77,4 @@
         </section>
     </div>
 </div>
-        {% endblock %}
+{% endblock %}
